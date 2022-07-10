@@ -1,0 +1,78 @@
+body {
+    margin: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameBoard {
+    width: 100vw;
+    height: 100vw;
+    margin: 0 auto;
+    background-color: #34495e;
+    color: #fff;
+    border: 6px solid #2c3e50;
+    border-radius: 10px;
+    display: grid;
+    grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+}
+.gameBoard > div {
+    border: 6px solid #2c3e50;
+    border-radius: 2px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+.gameBoard>div:hover {
+    background-color: #445F7A;
+}
+  
+.gameBoard > div.winner {
+    background: #41b059;
+}
+.gameBoard > div.winner > span {
+    color: black;
+}
+
+.btn {
+    border: 5px solid #2c3e50;
+    background-color: #34495e;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 20px;
+
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+.btn:hover {
+    background-color: #445F7A;
+}
+
+
+@media (min-width: 300px) {
+    .gameBoard {
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        border: 6px solid #2c3e50;
+    }
+
+    .gameBoard > div {
+        border-radius: 2px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .btn {
+        cursor: pointer
+    }
+}
